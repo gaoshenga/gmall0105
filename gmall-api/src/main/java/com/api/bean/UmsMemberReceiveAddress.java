@@ -1,4 +1,4 @@
-package com.dcits.gmall.user.bean;
+package com.api.bean;
 
 import javax.persistence.Id;
 import java.io.Serializable;

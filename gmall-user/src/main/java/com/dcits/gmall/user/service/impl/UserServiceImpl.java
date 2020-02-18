@@ -1,15 +1,13 @@
 package com.dcits.gmall.user.service.impl;
 
-import com.dcits.gmall.user.bean.UmsMember;
-import com.dcits.gmall.user.bean.UmsMemberReceiveAddress;
+import com.api.bean.UmsMember;
+import com.api.bean.UmsMemberReceiveAddress;
 import com.dcits.gmall.user.mapper.UmsMemberReceiveAddressMapper;
 import com.dcits.gmall.user.mapper.UserMapper;
-import com.dcits.gmall.user.service.UserService;
+import com.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tk.mybatis.mapper.entity.Example;
 
-import javax.crypto.ExemptionMechanism;
 import java.util.List;
 
 

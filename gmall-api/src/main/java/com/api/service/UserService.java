@@ -1,7 +1,7 @@
-package com.dcits.gmall.user.service;
+package com.api.service;
 
-import com.dcits.gmall.user.bean.UmsMember;
-import com.dcits.gmall.user.bean.UmsMemberReceiveAddress;
+import com.api.bean.UmsMember;
+import com.api.bean.UmsMemberReceiveAddress;
 
 import java.util.List;
 

@@ -6,11 +6,12 @@
         <groupId>com.dcits</groupId>
         <artifactId>gmall-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.dcits</groupId>
-    <artifactId>gmall-user</artifactId>
+    <groupId>com.atguigu.gmall</groupId>
+    <artifactId>gmall-user-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gmall-user</name>
+    <name>gmall-user-web</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -24,8 +25,6 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-
-
         <dependency>
             <groupId>com.dcits</groupId>
             <artifactId>gmall-service-util</artifactId>
@@ -37,9 +36,10 @@
             <artifactId>gmall-web-util</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
     </dependencies>
 

@@ -4,6 +4,7 @@ package com.dcits.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.api.bean.PmsBaseAttrInfo;
 import com.api.bean.PmsBaseAttrValue;
+import com.api.bean.PmsBaseSaleAttr;
 import com.api.service.AttrService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -45,7 +46,13 @@ public class AttrController {
         return pmsBaseAttrValueList;
     }
 
+    @RequestMapping("baseSaleAttrList")
+    @ResponseBody
+    public List<PmsBaseSaleAttr> baseSaleAttrList(){
 
+        List<PmsBaseSaleAttr> pmsBaseSaleAttrs =   attrService.baseSaleAttrList();
+        return pmsBaseSaleAttrs;
+    }
 
 
 

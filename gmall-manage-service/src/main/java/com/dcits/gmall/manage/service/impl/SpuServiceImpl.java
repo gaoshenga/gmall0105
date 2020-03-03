@@ -1,10 +1,7 @@
 package com.dcits.gmall.manage.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.api.bean.PmsProductImage;
-import com.api.bean.PmsProductInfo;
-import com.api.bean.PmsProductSaleAttr;
-import com.api.bean.PmsProductSaleAttrValue;
+import com.api.bean.*;
 import com.api.service.SpuService;
 import com.dcits.gmall.manage.mapper.PmsProductImageMapper;
 import com.dcits.gmall.manage.mapper.PmsProductInfoMapper;
@@ -90,5 +87,27 @@ public class SpuServiceImpl  implements SpuService {
         pmsProductImage.setProductId(spuId);
         List<PmsProductImage> pmsProductImages = pmsProductImageMapper.select(pmsProductImage);
         return pmsProductImages;
+    }
+
+    @Override
+    public List<PmsProductSaleAttr> spuSaleAttrListCheckBySku(String productId,String skuId) {
+
+
+//        PmsProductSaleAttr productSaleAttr = new PmsProductSaleAttr();
+//        productSaleAttr.setProductId(productId);
+//        List<PmsProductSaleAttr> pmsProductSaleAttrList = pmsProductSaleAttrMapper.select(productSaleAttr);
+//        for(PmsProductSaleAttr pmsProductSaleAttr: pmsProductSaleAttrList){
+//            String saleAttrId = pmsProductSaleAttr.getSaleAttrId();
+//
+//            PmsProductSaleAttrValue pmsProductSaleAttrValue = new PmsProductSaleAttrValue();
+//            pmsProductSaleAttrValue.setSaleAttrId(saleAttrId);
+//            pmsProductSaleAttrValue.setProductId(productId);
+//            List<PmsProductSaleAttrValue> pmsProductSaleAttrValues = pmsProductSaleAttrValueMapper.select(pmsProductSaleAttrValue);
+//            pmsProductSaleAttr.setSpuSaleAttrValueList(pmsProductSaleAttrValues);
+//        }
+
+
+        List<PmsProductSaleAttr> pmsProductSaleAttrList =  pmsProductSaleAttrMapper.selectSpuSaleAttrListCheckBySku(productId,skuId);
+        return pmsProductSaleAttrList;
     }
 }

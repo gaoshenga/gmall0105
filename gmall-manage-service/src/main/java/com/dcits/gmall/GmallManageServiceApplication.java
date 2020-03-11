@@ -1,4 +1,4 @@
-package com.dcits.gmall.manage;
+package com.dcits.gmall;
 
 
 import org.springframework.boot.SpringApplication;

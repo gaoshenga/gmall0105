@@ -3,9 +3,9 @@ package com.atguigu.gmall.search;
 import com.alibaba.dubbo.config.annotation.Reference;
 
 
-import com.api.bean.PmsSearchSkuInfo;
-import com.api.bean.PmsSkuInfo;
-import com.api.service.SkuService;
+import com.atguigu.gmall.bean.PmsSearchSkuInfo;
+import com.atguigu.gmall.bean.PmsSkuInfo;
+import com.atguigu.gmall.service.SkuService;
 import io.searchbox.client.JestClient;
 
 import io.searchbox.core.Index;

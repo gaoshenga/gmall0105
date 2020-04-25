@@ -24,7 +24,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
         LoginRequired methodAnnotation = hm.getMethodAnnotation(LoginRequired.class);
         //是否拦截
         StringBuffer url = request.getRequestURL();
-        System.out.println(url);
+//        System.out.println(url);
         if(methodAnnotation==null){
             return true;
         }

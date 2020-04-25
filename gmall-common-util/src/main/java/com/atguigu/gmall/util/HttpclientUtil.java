@@ -46,13 +46,14 @@ public class HttpclientUtil {
 
 
     public static String doPost(String url, Map<String,String> paramMap)   {
-       // 创建Httpclient对象
+        // 创建Httpclient对象
         CloseableHttpClient httpclient = HttpClients.createDefault();
         // 创建http Post请求
         HttpPost httpPost = new HttpPost(url);
         CloseableHttpResponse response = null;
         try {
-            if (paramMap!=null){
+
+            if(paramMap!=null){
                 List<BasicNameValuePair> list=new ArrayList<>();
                 for (Map.Entry<String, String> entry : paramMap.entrySet()) {
                     list.add(new BasicNameValuePair(entry.getKey(),entry.getValue())) ;
@@ -60,6 +61,7 @@ public class HttpclientUtil {
                 HttpEntity httpEntity=new UrlEncodedFormEntity(list,"utf-8");
                 httpPost.setEntity(httpEntity);
             }
+
             // 执行请求
             response = httpclient.execute(httpPost);
 
